@@ -6,7 +6,7 @@ const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/cadastro', (req, res) => {
+app.get('/', (req, res) => {
     res.send(`
     <html>
     <head>
