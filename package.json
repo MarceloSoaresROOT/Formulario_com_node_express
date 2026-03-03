@@ -1,0 +1,29 @@
+{
+  "name": "formulario-ppi2",
+  "version": "1.0.0",
+  "description": "Formulario de Cadastro com Node e Express",
+  "keywords": [
+    "POST",
+    "HTTP"
+  ],
+  "homepage": "https://github.com/MarceloSoaresROOT/Formulario_com_node_express#readme",
+  "bugs": {
+    "url": "https://github.com/MarceloSoaresROOT/Formulario_com_node_express/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarceloSoaresROOT/Formulario_com_node_express.git"
+  },
+  "license": "ISC",
+  "author": "Marcelo Henrique",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {}
+}
