@@ -1,8 +1,8 @@
 import express from 'express';
-const app = express();
 
-const host = '0.0.0.0';
-const port = 3000;
+const PORT = 3000;
+const HOST = 'localhost';
+const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 
@@ -72,12 +72,8 @@ app.get('/cadastro', (req, res) => {
     `);
 });
 
-// 🎮 RECEBENDO DADOS
 app.post('/cadastro', (req, res) => {
-    const nickname = req.body.nickname;
-    const email = req.body.email;
-    const plataforma = req.body.plataforma;
-    const jogoFavorito = req.body.jogoFavorito;
+    const { nickname, email, plataforma, jogoFavorito } = req.body;
 
     res.send(`
     <html>
@@ -93,7 +89,10 @@ app.post('/cadastro', (req, res) => {
     </html>
     `);
 });
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(PORT, () => {
+        console.log(`Servidor rodando em http://${HOST}:${PORT}`);
+    });
+}
 
-app.listen(port, host, () => {
-    console.log(`Servidor Funcionando em http://${host}:${port}/cadastro`);
-});
+export default app;
